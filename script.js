@@ -339,6 +339,9 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&a
   tempDay5Value = data['daily']['5']['temp']['day'];
   tempDay5.innerHTML = Math.round(tempDay5Value)+"°C";
 
+  document.querySelector("#curr-weather").style.display = "initial";
+  document.querySelector("#next-wrapper").style.display = "flex";
+
 })
 
 .catch(err => console.log("Wrong city name!"));

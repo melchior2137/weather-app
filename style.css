@@ -37,11 +37,13 @@ h4{
 #curr-weather{
     height: 115px;
     width: 115px;
+    display:none;
 }
 
 #next-wrapper{
     display: flex;
     justify-content: center;
+    display:none;
 }
 
 #next-5-days{
