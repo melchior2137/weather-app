@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <title>Weather</title>
+</head>
+<body>
+    <main>
+<h1 id="curr-time"></h1>
+<div id="curr-weather-wrapper">
+<img id="curr-weather" src="img/clear_sky.png" alt="Image that display current weather">
+<h2 id="currTemp">29°C</h2>
+</div>
+
+<div id="next-wrapper">
+<div id="next-5-days">
+<h3 id="day1">Mon</h3>
+<h3 id="day2">Tue</h3>
+<h3 id="day3">Wen</h3>
+<h3 id="day4">Thur</h3>
+<h3 id="day5">Fri</h3>
+<img id="curr-weather-1" class="img-5days" src="img/clear_sky.png">
+<img id="curr-weather-2" class="img-5days" src="img/scattered_clouds.png">
+<img id="curr-weather-3" class="img-5days" src="img/clear_sky.png">
+<img id="curr-weather-4" class="img-5days" src="img/scattered_clouds.png">
+<img id="curr-weather-5" class="img-5days" src="img/clear_sky.png">
+<h4 id="day1temp">25°C</h4>
+<h4 id="day2temp">22°C</h4>
+<h4 id="day3temp">29°C</h4>
+<h4 id="day4temp">26°C</h4>
+<h4 id="day5temp">27°C</h4>
+</div>
+</div>
+</main>
+<div id="left-footer">
+    <span id="getCurrPosition" class="material-icons-outlined md-48">
+        gps_fixed
+        </span>
+    <h3 contenteditable="true" id="localization">Click icon to get your location</h3>
+ </div>
+
+ <div id="right-footer">
+    <h3 id="curr-date">js error</h3>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
