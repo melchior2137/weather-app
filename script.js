@@ -34,7 +34,7 @@ if (currDay < 10) {
 document.getElementById("curr-date").innerHTML = currDay + "." + currMonth
   + "." + currYear;
 
-const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 let day1 = document.querySelector("#day1");
 day1.innerHTML = days[today.getDay() + 1];
