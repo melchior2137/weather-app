@@ -1,56 +1,56 @@
-html{
+html {
     height: 100%;
     font-family: 'Lato', sans-serif;
-    color:white;
+    color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-h1{
+h1 {
     font-weight: 100;
     font-size: 96px;
     text-align: center;
     margin-top: 7.5%;
 }
 
-h2{
+h2 {
     font-weight: 300;
     font-size: 64px;
     text-align: center;
 }
 
-h3{
+h3 {
     font-weight: 300;
     font-size: 32px;
 }
 
-h4{
+h4 {
     font-weight: 300;
     font-size: 24px;
 }
 
-#curr-weather-wrapper{
+#curr-weather-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
 
-#curr-weather{
+#curr-weather {
     height: 115px;
     width: 115px;
-    display:none;
+    display: none;
 }
 
-#next-wrapper{
+#next-wrapper {
     display: flex;
     justify-content: center;
-    display:none;
+    display: none;
 }
 
-#next-5-days{
-    display:grid;
+#next-5-days {
+    display: grid;
     grid-template-columns: repeat(5, 148px);
-    grid-template-rows:repeat(3, minmax(1fr, 100px));
+    grid-template-rows: repeat(3, minmax(1fr, 100px));
     text-align: center;
     justify-items: center;
     align-items: center;
@@ -58,38 +58,40 @@ h4{
     margin-top: 25px;
 }
 
-#next-5-days h3{
+#next-5-days h3 {
     align-self: flex-end;
 }
 
-#next-5-days h4{
+#next-5-days h4 {
     align-self: flex-start;
 }
 
-.img-5days{
-    width:100px;
-    height:100px;
-    margin:0;
+.img-5days {
+    width: 100px;
+    height: 100px;
+    margin: 0;
     padding: 0;
 }
 
-#left-footer{
+#left-footer {
     display: flex;
     position: absolute;
     bottom: 50px;
-    left:50px
+    left: 50px
 }
-#left-footer h3{
+
+#left-footer h3 {
     margin-left: 25px;
     align-self: center;
 }
-#right-footer{
+
+#right-footer {
     position: absolute;
     bottom: 50px;
     right: 50px;
 }
 
-.material-icons-outlined.md-48 { 
+.material-icons-outlined.md-48 {
     font-size: 48px;
     cursor: pointer;
 }
