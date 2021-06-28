@@ -347,10 +347,14 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&a
 .catch(err => console.log("Wrong city name!"));
 }
 
+
 let currentHour = today.getHours();
 console.log(currentHour);
 if(currentHour>=4 && currentHour<12){
     document.body.style.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), url('img/background.jpg')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
 }
 else if(currentHour>=12 && currentHour <21){
     document.body.style.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), url('img/background2.jpg')";
@@ -361,5 +365,8 @@ else if(currentHour>=12 && currentHour <21){
 }
 else{
     document.body.style.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), url('img/background3.jpg')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
 }
 
