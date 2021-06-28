@@ -324,19 +324,19 @@ function getWeather(lat, lon) {
 
 
 
-      tempDay1Value = data['daily']['1']['temp']['day'];
+      let tempDay1Value = data['daily']['1']['temp']['day'];
       tempDay1.innerHTML = Math.round(tempDay1Value) + "°C";
 
-      tempDay2Value = data['daily']['2']['temp']['day'];
+      let tempDay2Value = data['daily']['2']['temp']['day'];
       tempDay2.innerHTML = Math.round(tempDay2Value) + "°C";
 
-      tempDay3Value = data['daily']['3']['temp']['day'];
+      let tempDay3Value = data['daily']['3']['temp']['day'];
       tempDay3.innerHTML = Math.round(tempDay3Value) + "°C";
 
-      tempDay4Value = data['daily']['4']['temp']['day'];
+      let tempDay4Value = data['daily']['4']['temp']['day'];
       tempDay4.innerHTML = Math.round(tempDay4Value) + "°C";
 
-      tempDay5Value = data['daily']['5']['temp']['day'];
+      let tempDay5Value = data['daily']['5']['temp']['day'];
       tempDay5.innerHTML = Math.round(tempDay5Value) + "°C";
 
       document.querySelector("#curr-weather").style.display = "initial";
