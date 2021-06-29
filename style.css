@@ -2,7 +2,7 @@ html {
     height: 100%;
     font-family: 'Lato', sans-serif;
     color: white;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -33,13 +33,70 @@ h4 {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    height: 170px;
+    transition: all 500ms ease-in-out;
+}
+
+#curr-weather-wrapper:hover{
+    background: rgba(169, 169, 169, 0.2);
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+
+#curr-weather-wrapper:hover #min-max-wrapper{
+    opacity:100;  
+}
+
+#curr-weather-wrapper:hover #hpa-wrapper{
+    opacity:100;  
+}
+#img-and-temp-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#min-max-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    opacity:0;
+    transition: all 500ms ease-in-out;
+}
+
+#hpa-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    opacity:0;
+    transition: all 500ms ease-in-out;
 }
 
 #curr-weather {
     height: 115px;
     width: 115px;
     display: none;
+    transition: 0.5s;
 }
+
+#currTemp{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#currTemp:hover{
+    font-size: 72px;
+}
+
+#curr-weather:hover {
+    height: 125px;
+    width: 125px;
+}
+
 
 #next-wrapper {
     display: flex;
@@ -94,4 +151,11 @@ h4 {
 .material-icons-outlined.md-48 {
     font-size: 48px;
     cursor: pointer;
+}
+
+.on-hover-bigger{
+    transition: 0.5s;
+}
+.on-hover-bigger:hover{
+    font-size:32px;
 }
