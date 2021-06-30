@@ -88,9 +88,9 @@ function alertLocation(latitude, longitude) {
       // Success!
       var data = JSON.parse(request.responseText);
       var cityNameAndCode = data.results[0].formatted.split(',');
-      console.log(cityNameAndCode);
+      //console.log(cityNameAndCode);
       let cityName = cityNameAndCode[1].split(" ");
-      console.log(cityName);
+      //console.log(cityName);
       document.getElementById("localization").innerHTML = cityName[2];
     } else if (request.status <= 500) {
       // We reached our target server, but it returned an error
@@ -119,12 +119,12 @@ let tempDay4 = document.querySelector('#day4temp');
 let tempDay5 = document.querySelector('#day5temp');
 
 function getWeather(lat, lon) {
-  console.log(lat);
-  console.log(lon);
+  //console.log(lat);
+ // console.log(lon);
   fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=2d81ea702e902d65af59547bd10d8e08&units=metric')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      //console.log(data);
       let tempValue = data['current']['temp'];
       temp.innerHTML = Math.round(tempValue) + "°C";
 
@@ -362,12 +362,12 @@ function getWeather(lat, lon) {
         }
     })
 
-    .catch(err => console.log("Wrong city name!"));
+    //.catch(err => console.log("Wrong city name!"));
 }
 
 
 let currentHour = today.getHours();
-console.log(currentHour);
+//console.log(currentHour);
 if (currentHour >= 4 && currentHour < 12) {
   document.body.style.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), url('img/background.jpg')";
   document.body.style.backgroundPosition = "center";
