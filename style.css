@@ -14,33 +14,30 @@ h1 {
 
 h2 {
     font-weight: 300;
-    font-size: 64px;
+    font-size: 56px;
     text-align: center;
 }
 
 h3 {
     font-weight: 300;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 h4 {
     font-weight: 300;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 #curr-weather-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
     height: 170px;
     transition: all 500ms ease-in-out;
 }
 
 #curr-weather-wrapper:hover{
     background: rgba(169, 169, 169, 0.2);
-    border: 1px solid rgba(0, 0, 0, 1);
 }
 
 #curr-weather-wrapper:hover #min-max-wrapper{
@@ -54,6 +51,15 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#img-and-temp-wrapper:hover #currTemp{
+    font-size: 72px;
+}
+
+#img-and-temp-wrapper:hover #curr-weather{
+    height: 125px;
+    width: 125px;
 }
 
 #min-max-wrapper{
@@ -88,31 +94,21 @@ h4 {
     cursor: pointer;
 }
 
-#currTemp:hover{
-    font-size: 72px;
-}
-
-#curr-weather:hover {
-    height: 125px;
-    width: 125px;
-}
-
-
 #next-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     display: none;
 }
 
 #next-5-days {
     display: grid;
-    grid-template-columns: repeat(5, 148px);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, minmax(1fr, 100px));
     text-align: center;
     justify-items: center;
     align-items: center;
     grid-column-gap: 15px;
-    margin-top: 25px;
 }
 
 #next-5-days h3 {
@@ -124,8 +120,9 @@ h4 {
 }
 
 .img-5days {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width:125px;
+    height: auto;
     margin: 0;
     padding: 0;
 }
@@ -133,8 +130,8 @@ h4 {
 #left-footer {
     display: flex;
     position: absolute;
-    bottom: 50px;
-    left: 50px
+    bottom: 3vh;
+    left: 3vw;
 }
 
 #left-footer h3 {
@@ -143,9 +140,14 @@ h4 {
 }
 
 #right-footer {
+    display:flex;
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    height: 48px;
+    bottom: 3vh;
+    right: 3vw;
+}
+#right-footer h3{
+    align-self: center;
 }
 
 .material-icons-outlined.md-48 {
@@ -159,3 +161,4 @@ h4 {
 .on-hover-bigger:hover{
     font-size:32px;
 }
+

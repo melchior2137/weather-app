@@ -370,3 +370,8 @@ else {
   document.body.style.backgroundSize = "cover";
 }
 
+
+const intervalId = window.setInterval(function(){
+  console.log("Width:" + window.innerWidth);
+  console.log("height" + window.innerHeight);
+}, 1000);
