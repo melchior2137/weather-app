@@ -109,6 +109,7 @@ h4 {
     justify-items: center;
     align-items: center;
     grid-column-gap: 15px;
+    
 }
 
 #next-5-days h3 {
@@ -152,11 +153,11 @@ h4 {
 
 .material-icons-outlined.md-48 {
     font-size: 48px;
-    cursor: pointer;
 }
 
 .on-hover-bigger{
     transition: 0.5s;
+    display:none;
 }
 .on-hover-bigger:hover{
     font-size:32px;

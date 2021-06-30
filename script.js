@@ -52,7 +52,7 @@ let day5 = document.querySelector("#day5");
 day5.innerHTML = days[today.getDay() + 5];
 
 
-let button = document.getElementById("getCurrPosition");
+let button = document.querySelector(".getCurrPosition");
 
 button.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -323,6 +323,20 @@ function getWeather(lat, lon) {
       }
 
 
+      let minCurrTempValue = data['daily']['0']['temp']['min'];
+      let maxCurrTempValue = data['daily']['0']['temp']['max'];
+      let CurrHpaValue = data['daily']['0']['pressure'];
+      let currNightTempValue = data['daily']['0']['temp']['night'];
+
+      document.querySelector("#curr-min-temp").innerHTML = "min: "+ Math.round(minCurrTempValue) + "°C";
+      document.querySelector("#curr-max-temp").innerHTML = "max: "+ Math.round(maxCurrTempValue) + "°C";
+      document.querySelector("#curr-hPa").innerHTML = CurrHpaValue + " hPa";
+      document.querySelector("#curr-night").innerHTML = "night: "+ Math.round(currNightTempValue) + "°C";
+
+
+
+
+
 
       let tempDay1Value = data['daily']['1']['temp']['day'];
       tempDay1.innerHTML = Math.round(tempDay1Value) + "°C";
@@ -342,6 +356,10 @@ function getWeather(lat, lon) {
       document.querySelector("#curr-weather").style.display = "initial";
       document.querySelector("#next-wrapper").style.display = "flex";
 
+        let cols = document.getElementsByClassName('on-hover-bigger');
+        for(i = 0; i < cols.length; i++) {
+          cols[i].style.display = "initial";
+        }
     })
 
     .catch(err => console.log("Wrong city name!"));
@@ -369,9 +387,3 @@ else {
   document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.backgroundSize = "cover";
 }
-
-
-const intervalId = window.setInterval(function(){
-  console.log("Width:" + window.innerWidth);
-  console.log("height" + window.innerHeight);
-}, 1000);

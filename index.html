@@ -10,11 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather</title>
 </head>
 
@@ -23,16 +21,16 @@
         <h1 id="curr-time"></h1>
         <div id="curr-weather-wrapper">
             <div id="min-max-wrapper">
-            <h4 class="on-hover-bigger">min: 29°C</h4>
-            <h4 class="on-hover-bigger">max: 25°C</h4>
+            <h4 id="curr-min-temp" class="on-hover-bigger">min: 29°C</h4>
+            <h4 id="curr-max-temp" class="on-hover-bigger">max: 25°C</h4>
             </div>
             <div id="img-and-temp-wrapper">
                 <img id="curr-weather" src="img/clear_sky.png" alt="Image that display current weather">
-                <h2 id="currTemp">Click to get your location</h2>
+                <h2 class="getCurrPosition" id="currTemp">Click to get your location</h2>
             </div>
             <div id="hpa-wrapper">
-                <h4 class="on-hover-bigger">1012 hPa</h4>
-                <h4 class="on-hover-bigger">night: 25°C</h4>
+                <h4 id="curr-hPa" class="on-hover-bigger">1012 hPa</h4>
+                <h4 id="curr-night" class="on-hover-bigger">night: 25°C</h4>
             </div>
         </div>
 
@@ -57,10 +55,10 @@
         </div>
     </main>
     <div id="left-footer">
-        <span id="getCurrPosition" class="material-icons-outlined md-48">
+        <span class="material-icons-outlined md-48">
             gps_fixed
         </span>
-        <h3 id="localization">Click for location</h3>
+        <h3 id="localization">Waiting for location...</h3>
     </div>
 
     <div id="right-footer">
